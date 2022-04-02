@@ -1,4 +1,4 @@
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 var enter;
 var confirmNumber;
@@ -16,10 +16,9 @@ var optionsSymbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-"
 var space = [];
 
 
-// Write password to the #password input
 function writePassword() {
   
-  enter = parseInt(window.prompt("How many characters would you like your password? Choose between 8 and 128")); 
+  enter = parseInt(window.prompt("How many characters would you like your password to be? Choose between 8 and 128.")); 
   if (!enter) {
     alert("This needs a value");
   } else if (enter < 8 || enter > 128) {
@@ -126,15 +125,6 @@ document.getElementById("password").textContent = ps;
 
 }
 
-  
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
-  
-  //passwordText.value = password;
-  
-
-
-//Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 ps = generatePassword();
 document.getElementById("password").placeholder = ps; 
